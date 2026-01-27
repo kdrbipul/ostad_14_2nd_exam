@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
             GridView.builder(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
-              itemCount: courseCategories.length ,
+              itemCount: courseCategories.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount:2,
                 // crossAxisSpacing: 5,
@@ -35,9 +35,6 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 final course = courseCategories[index];
                 return Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
                   elevation: 3,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,12 +51,12 @@ class HomeScreen extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      SizedBox(height: 5),
+                      // SizedBox(height: 2),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Container(
-                            height: 25,
+                            height: 18,
                             width: 35,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
@@ -72,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            height: 25,
+                            height: 18,
                             width: 68,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
@@ -90,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            height: 25,
+                            height: 18,
                             width: 68,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
@@ -113,14 +110,16 @@ class HomeScreen extends StatelessWidget {
                       Text(
                         course.title,
                         style: TextStyle(
-                          // fontSize: 18,
+                          // fontSize: 24,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       // SizedBox(height: 10),
-                      // ElevatedButton(onPressed: (){}, child: Text('বিস্তারিত দেখি'))
+                      // ElevatedButton(onPressed: (){}, child: Text("j"))
                     ],
+
                   ),
+
                 );
               },
             ),
