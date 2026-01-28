@@ -24,12 +24,9 @@ class CourseCard extends StatelessWidget {
           CourseDetails(course: course),
           Divider(),
           CourseTitle(course: course),
-          // SizedBox(height: 10),
           MyElevetedButton()
         ],
-
       ),
-
     );
   }
 }

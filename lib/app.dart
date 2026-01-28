@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'home_screen.dart';
+
 class App extends StatelessWidget {
   const App({super.key});
 
@@ -11,22 +11,28 @@ class App extends StatelessWidget {
         title: 'Exam-2nd',
         debugShowCheckedModeBanner: false,
         home: HomeScreen(),
-        theme: ThemeData(
-          useMaterial3: true,
-          appBarTheme: AppBarTheme(
-            backgroundColor: Colors.amber.shade500,
-          ),
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.grey.shade300,
-              foregroundColor: Colors.black,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
+        theme: customTheme(),
+      ),
+    );
+  }
+
+
+
+  ThemeData customTheme() {
+    return ThemeData(
+        useMaterial3: true,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.amber.shade500,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.grey.shade300,
+            foregroundColor: Colors.black,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
