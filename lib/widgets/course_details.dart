@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'available_sit.dart';
+import 'batch_no.dart';
 import 'course_category.dart';
+import 'course_due_day.dart';
+
 class CourseDetails extends StatelessWidget {
   const CourseDetails({
     super.key,
@@ -14,56 +17,13 @@ class CourseDetails extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        Container(
-          height: 18,
-          width: 35,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.grey.shade300,
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: Text(
-            course.batchNo,
-            style: TextStyle(fontSize: 9),
-          ),
-        ),
-        Container(
-          height: 18,
-          width: 68,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.grey.shade300,
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: Row(
-            children: [
-              Icon(Icons.person, size: 12),
-              Text(
-                course.availableSit,
-                style: TextStyle(fontSize: 9),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          height: 18,
-          width: 68,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: Colors.grey.shade300,
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: Row(
-            children: [
-              Icon(Icons.timer_rounded, size: 12),
-              Text(
-                course.day,
-                style: TextStyle(fontSize: 9),
-              ),
-            ],
-          ),
-        ),
+        BatchNo(course: course),
+        AvailableSit(course: course),
+        CourseDueDay(course: course),
       ],
     );
   }
 }
+
+
+
