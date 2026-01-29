@@ -11,11 +11,14 @@ class CourseTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      course.title,
-      style: TextStyle(
-        // fontSize: 24,
-        fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 2),
+      child: Text(
+        course.title,
+        style: TextStyle(
+          // fontSize: 24,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
