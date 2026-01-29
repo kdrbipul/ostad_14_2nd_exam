@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class MyElevetedButton extends StatelessWidget {
-  const MyElevetedButton({
+class MyElevButton extends StatelessWidget {
+  const MyElevButton({
     super.key,
   });
 

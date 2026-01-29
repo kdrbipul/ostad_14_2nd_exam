@@ -3,7 +3,7 @@ import 'course_category.dart';
 import 'course_details.dart';
 import 'course_image.dart';
 import 'course_title.dart';
-import 'eleveted_button.dart';
+import 'my_elev_button.dart';
 class CourseCard extends StatelessWidget {
   const CourseCard({
     super.key,
@@ -24,7 +24,7 @@ class CourseCard extends StatelessWidget {
           CourseDetails(course: course),
           Divider(),
           CourseTitle(course: course),
-          MyElevetedButton()
+          MyElevButton()
         ],
       ),
     );
